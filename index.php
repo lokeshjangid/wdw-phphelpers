@@ -10,14 +10,22 @@ Author: ckchaudhary, emediaidentity
 Author URI: http://webdeveloperswall.com/
 */
 
-if( !function_exists('add_http') ):
+/* ====================================================
+Some conventions to be followed, for consistency, nothing else
+
+1. function names must be camelCase - started with camelCase, so for consistency, will have all other functions follow the same
+
+
+==================================================== */
+
+if( !function_exists('addHttp') ):
 /* helper function to ensure we have an http:// in the given url, 
  * if not found, the function will add it 
  *
  * @param string $url url to process
  * @return string new url
 */
-function add_http($url){
+function addHttp($url){
     $found = false;
     
     $pos = strpos($url, 'http://');
@@ -55,5 +63,20 @@ function endsWith($haystack, $needle){
     }
 
     return (substr($haystack, -$length) === $needle);
+}
+endif;
+
+if( !function_exists( 'isNullOrEmptyString' ) ):
+function isNullOrEmptyString($question){
+    return (!isset($question) || trim($question)==='');
+}
+endif;
+
+if( !function_exists( 'getNumeric' ) ):
+function getNumeric($val) { 
+  if (is_numeric($val)) { 
+    return $val + 0; 
+  } 
+  return 0; 
 }
 endif;
