@@ -14,7 +14,7 @@ Author URI: http://webdeveloperswall.com/
 Some conventions to be followed, for consistency, nothing else
 
 1. function names must be camelCase - started with camelCase, so for consistency, will have all other functions follow the same
-
+    - Exception : wordpressesque functions with get_ . Ex: favoriteCount and get_favoriteCount
 
 ==================================================== */
 
